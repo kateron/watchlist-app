@@ -3,10 +3,19 @@
 
 body{
   background-color: #a9b7d8;
+  color: #505050;
 }
 
 .card{
   width: 20em;
+  margin-top: 5em;
+  background-image: url(popcorn.jpg);
+  background-position: top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-top: 5em;
+  box-sizing: border-box;
+  
 }
 
 .banner{
@@ -14,13 +23,76 @@ body{
   height: 4em;
 }
 
+.card-title{
+  position: absolute;
+  top: 0.5em;
+  color: white;
+}
+.class-text{
+  position: absolute;
+  top: 1em;
+}
+
 .movie-list-item{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+.movie-title{
+  flex: 1 0 auto;
+  font-weight: 700;
+}
+
+.movie-list-item>i{
+  margin: 0 0.25em;
 }
 
 .genre{
   flex: 1 0 100%;
+  font-style: italic;
+  color: #a9b7d8;
+}
+
+.btn-primary{
+  background-color: #a9b7d8;
+  border: none;
+}
+
+form{
+  position: relative;
+}
+
+form::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-top: #a9b7d8 solid 1px;
+  width: 80%;
+  left: 50%;
+  top: 0;
+  transform: translateY(-0.05em)translateX(-50%);
+
+}
+
+form::after{
+  content: 'add movie';
+  display: block;
+  position: absolute;
+  top: -0.05em;
+  left: 50%;
+  background-color: white;
+  text-align: center;
+  transform: translateY(-50%)translateX(-50%);
+  padding: 0 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a9b7d8;
+}
+
+.fa-times-circle{
+  color: #a9b7d8;
+}
+
+.fa-check-circle{
+  color: #d8a9bd;
 }
